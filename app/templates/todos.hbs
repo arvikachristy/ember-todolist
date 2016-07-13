@@ -1,3 +1,20 @@
 <div class="title">
 	<p>Hello welcome to the todo list</p>
+	{{#link-to 'todos' class="button"}}
+		Move it
+	{{/link-to}}
 </div>
+
+{{#each model as |task|}}
+<div class="tasklist">
+	<article class="listing">
+		<h3>{{task.title}}</h3>
+		<div class="desc">
+			<span>Description:</span> {{task.description}}
+		</div>
+		<div class="deadline">
+			<span>Deadline:</span> {{task.deadline}}
+		</div>
+	</article>
+</div>
+{{/each}}
