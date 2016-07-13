@@ -6,15 +6,5 @@
 </div>
 
 {{#each model as |task|}}
-<div class="tasklist">
-	<article class="listing">
-		<h3>{{task.title}}</h3>
-		<div class="desc">
-			<span>Description:</span> {{task.description}}
-		</div>
-		<div class="deadline">
-			<span>Deadline:</span> {{task.deadline}}
-		</div>
-	</article>
-</div>
+{{todo-item title=task.title description=task.description deadline=task.deadline}}
 {{/each}}
