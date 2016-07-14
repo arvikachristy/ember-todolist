@@ -12,7 +12,7 @@ let tasks = [{
 	title: 'Laundry day',
 	description: 'don\'t foget before sunday!',
 	deadline: '13/07/2016'
-}]
+}];
 
 export default Ember.Route.extend({
 	model(){
