@@ -1,10 +1,22 @@
 <div class="title">
 	<p>Hello welcome to the todo list</p>
-	{{#link-to 'todos' class="button"}}
-		Move it
-	{{/link-to}}
+	<form {{action "submitTodo" on="submit"}}>
+		{{input type="text" class="form-control" placeholder="Title" value=model.title}}
+		<br>
+		{{input type="text" class="form-control" placeholder="Description" value=model.description}}
+		<br>
+		{{input type="text" class="form-control" placeholder="Deadline" value=model.deadline}}
+		<br>
+		<button class="btn btn-default" type="submit"> Add me</button>
+	 </form>
+	{{!-- {{#link-to 'todos' class="button"}}
+		Submit!
+	{{/link-to}} --}}
 </div>
 
 {{#each model as |task|}}
-{{todo-item title=task.title description=task.description deadline=task.deadline}}
+{{todo-item 
+	title=task.title 
+	description=task.description 
+	deadline=task.deadline}}
 {{/each}}

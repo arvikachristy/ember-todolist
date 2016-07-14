@@ -15,8 +15,10 @@ let tasks = [{
 }];
 
 export default Ember.Route.extend({
+
 	model(){
 		// return this.get('store').findAll('todos');
+		// this.get('store').push(tasks);
 		return tasks;
 	}
 
