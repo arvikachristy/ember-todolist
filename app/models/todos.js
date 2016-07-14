@@ -6,4 +6,4 @@ export default Model.extend({
 	title: attr(),
 	description: attr(),
 	deadline: attr()
-});
+})
